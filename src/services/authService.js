@@ -1,4 +1,4 @@
-const { User } = require("../model/user");
+const { User } = require("../model/User");
 const { validateFields } = require("../utils/validateFields");
 const { comparePassword } = require("../utils/bcrypt");
 const jwt = require("../utils/jwt");
