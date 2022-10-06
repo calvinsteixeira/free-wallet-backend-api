@@ -2,20 +2,16 @@ const { Sequelize } = require("sequelize");
 let database = null;
 
 try {
-  if (process.env.CLEARDB_DATABASE_URL) {
-    database = new Sequelize(process.env.CLEARDB_DATABASE_URL);
+  if (process.env.DB_ENDPOINT) {
+    database = new Sequelize(
+      process.env.DB_ENDPOINT,
+      process.env.DB_USERNAME,
+      process.env.DB_PASSWORD,
+      {
+        port: process.env.AWS_DB_PORT,
+      }
+    );
   } else {
-    // PARA CONEXÃO LOCAL COM MYSQL
-    // database = new Sequelize(
-    //   process.env.DB_NAME,
-    //   process.env.DB_USERNAME,
-    //   process.env.DB_PASSWORD,
-    //   {
-    //     host: process.env.DB_HOST,
-    //     dialect: process.env.DB_DIALECT,
-    //     port: process.env.PORT,
-    //   }
-    // PARA CONEXÃO LOCAL COM SQLITE
     database = new Sequelize({
       dialect: "sqlite",
       storage: "./database_name.sqlite",
