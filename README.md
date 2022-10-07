@@ -1,1 +1,13 @@
-<b>Sobre o projeto</b>
+<h3><b>Sobre o projeto</b></h3>
+
+A aplicação Free Wallet conta com um projeto de Back-End (api em que estamos) e um projeto de Front-End em React, que se encontra na sessão "Links" desse Readme. Essa aplicação tem como objetivo permitir ao usuário tem um controle simples e objetivo sobre créditos e débitos realizados diariamente.
+
+<h3><b>Features</b></h3>
+<ul>
+  <li>Adicionar transações pelo seu tipo (crédito ou débito), descrição, valor e data em que foi realizada.</li>
+  <li>Alterar transações pela sua descrição, valor e data em que foi realizada.</li>
+  <li>Remover transações</li>
+  <li>Buscar transações pela sua data</li>
+  <li>Visualizar histórico de transações</li>
+  <li>Visualizar o valor atual da carteira (diferença entre créditos e débitos, como um balance)</li>
+</ul
