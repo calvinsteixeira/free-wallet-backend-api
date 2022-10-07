@@ -32,4 +32,4 @@ A aplicação Free Wallet conta com um projeto de Back-End (api em que estamos) 
 </ul>
 
 <h3><b>Links Extras</b></h3>
-// <a href="https://github.com/calvinsteixeira/free-wallet-frontend">Projeto free-wallet-frontend</a>
+// <a href="https://github.com/calvinsteixeira/free-wallet-frontend">Projeto Free Wallet (Front-end)</a>
