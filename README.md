@@ -11,8 +11,8 @@ A inicialização do projeto com o comando 'npm run dev' irá criar na pasta rai
 
 <h3><b>Rotas disponíveis</b></h3>
 <p>/login</p>
-<p>
-  {<br><p></p>"nome": "teste",<br>}
+<p style="margin: 20px;">
+  {<br>"nome": "teste",<br>}
 </p>
 
 
