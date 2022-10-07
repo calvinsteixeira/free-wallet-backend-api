@@ -11,7 +11,7 @@ function routes(router) {
   const authController = require("../controller/authController");
   const transactionController = require("../controller/transactionController");
 
-  router.put("/login", async (req, res) => {
+  router.post("/login", async (req, res) => {
     try {
       const credentials = req.body;
       const response = await authController.login(credentials);
@@ -29,7 +29,7 @@ function routes(router) {
     }
   });
 
-  router.put("/novo-usuario", async (req, res) => {
+  router.post("/novo-usuario", async (req, res) => {
     try {
       const userData = req.body;
       const response = await userController.createNewUser(userData);
@@ -47,7 +47,7 @@ function routes(router) {
     }
   });
 
-  router.put("/nova-transacao", verifyToken, async (req, res) => {
+  router.post("/nova-transacao", verifyToken, async (req, res) => {
     try {
       let transactionData = req.body;
       transactionData.payloadJWT = req.payloadJWT;
@@ -87,7 +87,7 @@ function routes(router) {
     }
   });
 
-  router.put("/alterar-transacao", verifyToken, async (req, res) => {
+  router.post("/alterar-transacao", verifyToken, async (req, res) => {
     try {
       let data = req.body;
       data.payloadJWT = req.payloadJWT;
