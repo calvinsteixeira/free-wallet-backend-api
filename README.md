@@ -14,8 +14,6 @@ A inicialização do projeto com o comando 'npm run dev' irá criar na pasta rai
 <p>
   {<br>"nome": "teste",<br>"CPF": "teste",<br>"email": "teste"<br>"password": "teste"<br>}
 </p>
-
-
 <h3><b>Features</b></h3>
 <ul>
   <li>Adicionar transações pelo seu tipo (crédito ou débito), descrição, valor e data em que foi realizada.</li>
