@@ -15,8 +15,7 @@ A aplicação Free Wallet conta com um projeto de Back-End (api em que estamos) 
   <li>Adicionar transações pelo seu tipo (crédito ou débito), descrição, valor e data em que foi realizada.</li>
   <li>Alterar transações pela sua descrição, valor e data em que foi realizada.</li>
   <li>Remover transações</li>
-  <li>Buscar transações pela sua data</li>
-  <li>Visualizar histórico de transações</li>
+  <li>Histórico de transações</li>
   <li>Visualizar o valor atual da carteira (diferença entre créditos e débitos, como um balance)</li>
 </ul>
 
