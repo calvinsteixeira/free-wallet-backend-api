@@ -4,7 +4,7 @@ function routes(router) {
 
   // CORS
   const cors = require("cors");
-  router.use(cors());
+  router.use(cors({ methods: ["GET", "PUT", "POST", "DELETE"] }));
 
   // CONTROLLERS
   const userController = require("../controller/userController");
