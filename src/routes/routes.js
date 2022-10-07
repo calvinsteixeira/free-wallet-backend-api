@@ -4,14 +4,14 @@ function routes(router) {
 
   // CORS
   const cors = require("cors");
-  router.use(cors({ methods: ["GET", "PUT", "POST", "DELETE"] }));
+  router.use(cors());
 
   // CONTROLLERS
   const userController = require("../controller/userController");
   const authController = require("../controller/authController");
   const transactionController = require("../controller/transactionController");
 
-  router.post("/login", async (req, res) => {
+  router.put("/login", async (req, res) => {
     try {
       const credentials = req.body;
       const response = await authController.login(credentials);
@@ -29,7 +29,7 @@ function routes(router) {
     }
   });
 
-  router.post("/novo-usuario", async (req, res) => {
+  router.put("/novo-usuario", async (req, res) => {
     try {
       const userData = req.body;
       const response = await userController.createNewUser(userData);
@@ -47,7 +47,7 @@ function routes(router) {
     }
   });
 
-  router.post("/nova-transacao", verifyToken, async (req, res) => {
+  router.put("/nova-transacao", verifyToken, async (req, res) => {
     try {
       let transactionData = req.body;
       transactionData.payloadJWT = req.payloadJWT;
