@@ -12,12 +12,8 @@ A inicialização do projeto com o comando 'npm run dev' irá criar na pasta rai
 <h3><b>Rotas disponíveis</b></h3>
 <p>/login</p>
 
-  {
-    "nome": "teste",
-    "CPF": "teste",
-    "email": "teste"
-    "password": "teste"
-  }
+  {<br>"nome": "teste",<br>"CPF": "teste",<br>"email": "teste"<br>"password": "teste"<br>}
+
 
 <h3><b>Features</b></h3>
 <ul>
