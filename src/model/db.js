@@ -8,13 +8,13 @@ try {
       process.env.DB_USERNAME,
       process.env.DB_PASSWORD,
       {
-        port: process.env.AWS_DB_PORT,
+        port: process.env.DB_PORT,
       }
     );
   } else {
     database = new Sequelize({
       dialect: "sqlite",
-      storage: "./database_name.sqlite",
+      storage: "./free-wallet-database.sqlite",
     });
   }
 } catch (error) {

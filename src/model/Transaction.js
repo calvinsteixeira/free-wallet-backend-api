@@ -23,17 +23,11 @@ TransactionCategory.init(
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
       allowNull: false,
-      validate: {
-        isDate: true,
-      },
     },
     updated_time: {
       type: DataTypes.TIME,
       defaultValue: DataTypes.TIME,
       allowNull: false,
-      validate: {
-        isDate: true,
-      },
     },
   },
   {
@@ -124,9 +118,40 @@ TransactionCategory.belongsTo(UserTransaction, {
   constraints: false,
 });
 
-// CREATE IF NOT EXISTS
-TransactionCategory.sync();
-UserTransaction.sync();
+// BUILD
+async function buildTables() {
+  await TransactionCategory.sync();
+  await UserTransaction.sync();
+  await TransactionCategory.findOrCreate({
+    where: {
+      id: 1,
+    },
+    defaults: {
+      id: 1,
+      description: "Adicionar saldo",
+    },
+  })
+    .then(() => {})
+    .catch((err) => {
+      throw new Error(err);
+    });
+
+  await TransactionCategory.findOrCreate({
+    where: {
+      id: 2,
+    },
+    defaults: {
+      id: 2,
+      description: "Adicionar despesa",
+    },
+  })
+    .then(() => {})
+    .catch((err) => {
+      throw new Error(err);
+    });
+}
+
+buildTables();
 
 module.exports = {
   TransactionCategory,
