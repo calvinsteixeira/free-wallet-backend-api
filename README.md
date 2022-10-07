@@ -9,6 +9,8 @@ A aplicação Free Wallet conta com um projeto de Back-End (api em que estamos) 
 </ol>
 A inicialização do projeto com o comando 'npm run dev' irá criar na pasta raiz do projeto um arquivo .sqlite, e irá executar um INSERT de alguns dados default em uma das models (TransactionCategory). A secret do JWT está disponível no arquivo nodemon.js como uma variável de ambiente (afim de testes locais ela está setada com um valor padrão, mas pode ser alterada diretamente nesse arquivo)
 
+É importante saber que atualmente o projeto seta a porta 3000 para o localhost, para consumir a API no projeto de Front-End, é importante manter essa porta, caso ela tenha seu valor alterado, o projeto de Front-End também precisa ter os paths das chamadas alterados.
+
 <h3><b>Features</b></h3>
 <ul>
   <li>Adicionar transações pelo seu tipo (crédito ou débito), descrição, valor e data em que foi realizada.</li>
